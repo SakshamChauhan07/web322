@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Budget Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body><center>
+      <button><a href="/load-data/meal-kits">Load Data</a></button>
+      <button><a href="/clerk/clerk_add">Add Meal</a></button>
+      <button><a href="clerk/list-mealkit"> List</a></button>
+      <button><a href="clerk/remove-mealkit"> Menu</a></button></center>
+      <br>
+      <h1><center>Menu</center></h1>
+      <br>
+      <br>
+      <br>
+
+        {{#each meals}}
+          
+          <div id = "clerk_meal">
+              <div id = "clerk_image"> 
+                  <img src={{imageUrl}} />
+              </div>
+              <div id="clerk_box_text">
+              <b>Name: {{title}}</b><br>
+              Includes : {{includes}}<br>
+              Description : {{description}}<br>
+              Price : ${{price}}<br>
+              Cooking time : {{cookingTime}} Min<br>
+              Serving : {{serving}}<br>
+              Top Meal : {{top_meal}}
+              </div>
+
+              <div id="clerk_input">
+                <form method="post" action="updateMeal">
+              Name: <input type="text" name="title" class="form-control" value="{{title}}" readonly >
+              Includes :<input type="text" name="includes" class="form-control" id="includes" value={{includes}}>
+              Description : <input type="text" name="description" class="form-control" id="description" value={{description}}>
+              Price : <input type="text" name="price" class="form-control" id="price" value={{price}}>
+              Cooking time : <input type="text" name="cookingTime" class="form-control" id="cookingTime" value={{cookingTime}}>
+              Serving : <input type="text" name="serving" class="form-control" id="serving" value={{serving}}>
+              Top Meal : <input type="text" name="topMeal" class="form-control" id="topMeal" value={{top_meal}}><br>
+               <input type="submit" value="Update" class="btn btn-primary"/>
+
+              </form>
+              </div>
+          </div>
+          
+          <br>
+
+        {{/each}}
+
+  </body>
+</html>

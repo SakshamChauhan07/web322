@@ -1,0 +1,35 @@
+<header>
+      <div id="headline">New Launch</div>
+      <div id="main_header">
+        <div id="main_header_left">
+          <div id="header_logo">
+            <div id="logo">
+              <a href = "/"><img src="/images/logo.png" /></a>
+            </div>
+            <div id= "header_menu" class="row align-items-center">
+              <div class="col">
+                <a href="/OnMyMenu"> Menu</a>
+              </div>
+              <div class="col">
+                <a href="/aboutme"> About Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="main_header_right">
+          <div id="login_button">
+            {{#if user}}
+            <button>Welcome, {{user.firstName}} {{user.lastName}}</button><br>
+            {{#if isClerk}}
+            <button><a href="clerk/list-mealkit">Clerk Menu</a></button>
+            {{/if}}
+            <button><a href="/user/logout">Logout</a></button>
+            {{else}}
+            <button><a href="/user/login"> Login</a></button>
+            <button><a href="/user/registration"> Sign Up</a></button>
+
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </header>

@@ -1,0 +1,37 @@
+{{#each errors}}
+      <p style="color: red;">{{this}}</p>
+      {{/each}}
+<div id="clerk_input">
+      <form method="post" action="addMeal" enctype="multipart/form-data">
+      <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" name="title" class="form-control" placeholder="Name" id="title" aria-label="title" >
+      </div>
+      <div class="mb-3">
+      <label class="form-label">Includes</label>
+      <input type="text" name="includes" class="form-control" placeholder="Includes" id="includes" aria-label="includes"></div>
+      <div class="mb-3">
+      <label class="form-label">Description</label>
+      <input type="text" name="description" class="form-control" placeholder="Description" id="description" aria-label="description"></div>
+      <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input type="text" name="categoryName" class="form-control" placeholder="Category Name" id="categoryName" aria-label="Category"></div>
+      <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input type="text" name="price" class="form-control" placeholder="Price" id="price" aria-label="price"></div>
+      <div class="mb-3">
+      <label class="form-label">Serving</label>
+      <input type="text" name="serving" class="form-control" placeholder="Serving" id="serving" aria-label="serving"></div>
+      <div class="mb-3">
+      <label class="form-label">Cooking Time</label>
+      <input type="text" name="cookingTime" class="form-control" placeholder="Cooking Time" id="cookingTime" aria-label="cookingTime"></div>
+      <div class="mb-3">
+      <label  class="form-label">Is It Top Meal?</label>
+      <input type = "checkbox" id="topMeal" name="topMeal" value=true ></div>
+      <input type="file" name="imageUrl" id="imageUrl">
+      <br> 
+      <br>
+      <input type="submit" value="Add" class="btn btn-primary"/>
+      </form>
+
+</div>

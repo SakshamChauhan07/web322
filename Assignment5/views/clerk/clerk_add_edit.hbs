@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Budget Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body><center>
+      <button><a href="/load-data/meal-kits">Load Data</a></button>
+      <button><a href="/clerk/clerk_add">Add Meal</a></button>
+      <button><a href="/clerk/edit-mealkit">Edit Meal</a></button>
+      <button><a href="/clerk/remove-mealkit"> Menu</a></button></center>
+      <br>
+      <h1><center>Menu</center></h1>
+      <br>
+      <br>
+      <br>
+
+        {{#each meals}}
+          
+          <div id = "clerk_meal">
+              <div id = "clerk_image"> 
+                  <img src={{imageUrl}} />
+              </div>
+              <div id="clerk_box_text">
+              <b>Name: {{title}}</b><br>
+              Includes : {{includes}}<br>
+              Description : {{description}}<br>
+              Price : ${{price}}<br>
+              Cooking time : {{cookingTime}} Min<br>
+              Serving : {{serving}}<br>
+              Top Meal : {{top_meal}}
+              </div>
+
+              </form>
+              </div>
+          </div>
+          
+          <br>
+
+        {{/each}}
+
+  </body>
+</html>
